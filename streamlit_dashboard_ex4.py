@@ -11,7 +11,7 @@ df = px.data.gapminder()
 st.title("📊 Interactive Dashboard with Multiple Plots")
 
 # Create a sidebar filter for selecting a year
-selected_year = st.sidebar.slider("Select Year:", int(df["year"].min()), int(df["year"].max()), int(df["year"].min()))
+selected_year = st.sidebar.slider("Select Year:", int(df["year"].min()), int(df["year"].max()), int(df["year"].min()),step=5)
 
 # Filter data based on the selected year
 filtered_df = df[df.year == selected_year]
